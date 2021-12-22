@@ -5,6 +5,8 @@ manipulate Kubernetes Resource Model (KRM) object manifests (YAML).
 
 A example pipeline is defined in `kinetic.ipynb`.
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/karlkfi/kinetic/blob/main/kinetic.ipynb)
+
 # jupyter-krm
 
 This example includes a docker image, which containerizes the requirements for
