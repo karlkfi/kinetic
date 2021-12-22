@@ -21,6 +21,12 @@ The `jupyter-krm` image has two modes of operation:
 - Interactive mode
 - Headless mode
 
+In both modes, the local package directory will be mounted into the container,
+to serve as both input and output.
+
+In addition to manipulating packages of KRM manifests, kinetic can also generate
+manifests or render manifest templates with tools like helm or kustomize.
+
 ## Interactive mode
 
 Interactive mode is used for editing the notebook.
