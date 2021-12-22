@@ -67,3 +67,26 @@ to PyPI.
 
 The KRM SDK includes classes and functions for manipulating packages of
 yaml files, which include one or more KRM objects.
+
+# Dependencies
+
+If you're executing the notebook in the provided `jupyter-krm` container,
+then all the dependencies are included (except docker).
+
+If you're executing the notebook in [Google Colab](https://colab.research.google.com/),
+then add the following code cell at the top, to install dependencies:
+
+```
+# Install kpt
+!wget https://github.com/GoogleContainerTools/kpt/releases/download/v1.0.0-beta.9/kpt_linux_amd64 -O /usr/local/bin/kpt
+!chmod a+x /usr/local/bin/kpt
+!kpt version
+
+# Install kubernetes client
+!pip install kubernetes
+
+# Enable interactive table display
+%load_ext google.colab.data_table
+```
+
+Colab should already come with `pandas` and `pyyaml` installed.
