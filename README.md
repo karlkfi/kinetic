@@ -5,20 +5,18 @@ manipulate Kubernetes Resource Model (KRM) object manifests (YAML).
 
 A example pipeline is defined in `kinetic.ipynb`.
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/karlkfi/kinetic/blob/main/kinetic.ipynb)
+# Usage
 
-# jupyter-krm
-
-This example includes a docker image, which containerizes the requirements for
+The `jupyter-krm` containter image containerizes the dependencies for
 executing the `kinetic.ipynb` notebook. 
 
-To build this image locally:
+To build the `jupyter-krm` image:
 
 ```
 make image
 ```
 
-The jupyter-krm image has two modes of operation:
+The `jupyter-krm` image has two modes of operation:
 
 - Interactive mode
 - Headless mode
@@ -68,13 +66,15 @@ to PyPI.
 The KRM SDK includes classes and functions for manipulating packages of
 yaml files, which include one or more KRM objects.
 
-# Dependencies
+# Colab
 
-If you're executing the notebook in the provided `jupyter-krm` container,
-then all the dependencies are included (except docker).
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/karlkfi/kinetic/blob/main/kinetic.ipynb)
 
-If you're executing the notebook in [Google Colab](https://colab.research.google.com/),
-then add the following code cell at the top, to install dependencies:
+While designed to be run locally or in CI/CD, you can also experiment with
+kinetic in [Google Colab](https://colab.research.google.com/).
+
+When running the notebook in Colab, add the following code cell at the top, to
+install dependencies:
 
 ```
 # Install kpt
@@ -89,4 +89,4 @@ then add the following code cell at the top, to install dependencies:
 %load_ext google.colab.data_table
 ```
 
-Colab should already come with `pandas` and `pyyaml` installed.
+Colab should come with `pandas` and `pyyaml` pre-installed.
